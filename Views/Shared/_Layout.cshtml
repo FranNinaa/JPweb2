@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,10 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="text-bg-primary p-3">
+            <div class="text-primary p-2">
                 <a class="alert-heading" asp-area="" asp-controller="Home" asp-action="Index"></a>
+                <a class="alert-heading" asp-area="" asp-controller="Aluno" asp-action="Index"></a>
+                <a class="alert-heading" asp-area="" asp-controller="Professor" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,13 +22,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" asp-area="" asp-controller="Home" asp-action="Index">Pagina Inicial</a>
+                            <a class="btn btn-outline-success me-2" style="background-color: #ECB038;" asp-area="" asp-controller="Home" asp-action="Index" type="button">Pagina Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" asp-area="" asp-controller="Home" asp-action="Aluno">Aluno</a>
+                            <a class="btn btn-outline-success me-2" style="background-color: #ECB038;" asp-area="" asp-controller="Cadastro" asp-action="Index" type="button">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" asp-area="" asp-controller="Home" asp-action="Professor">Professor</a>
+                            <a class="btn btn-outline-success me-2" style="background-color: #ECB038;" asp-area="" asp-controller="Aluno" asp-action="Index" type="button">Aluno</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" btn btn-outline-success me-2" style="background-color: #ECB038;" asp-area="" asp-controller="Professor" asp-action="Index" type="button">Professor</a>
                         </li>
                     </ul>
                 </div>

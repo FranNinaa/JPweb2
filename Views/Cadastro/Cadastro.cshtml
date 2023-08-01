@@ -10,17 +10,12 @@
     * {
       box-sizing: border-box;
       font-family: 'Quicksand', sans-serif;
-      margin-left: 0;
-      margin-right: 0;
+      
     }
- 
-    html,
-    body {
-      margin: 0;
-    }
- 
+
     .full-screen-container {
       background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    
       height: 100vh;
       width: 100vw;
       background-size: cover;
@@ -28,7 +23,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+       
     }
+
+    html, body {
+     height: auto;
+      width: auto;
+      margin-left: auto;
+      
+    }
+    
  
     .login-container {
       background-color: hsla(201, 100%, 6%, 0.6);
@@ -99,7 +103,7 @@
 </style>
 </head>
 <body>
-    <div class="full-screen-container">
+    <div class="full-screen-container" style="margin-left:0px; margin-left:0px;">
         <div class="login-container">
             <h3 class="login-title">Bem vindo ao Jovem Programador</h3>
             <form>

@@ -26,6 +26,9 @@
             <th scope="col">Nome</th>
             <th scope="col">Data de Nascimento</th>
             <th scope="col">Curso</th>
+            <th scope="col">CEP</th>
+             <th scope="col">Endereço</th>
+
         </tr>
     </thead>
     <tbody>
@@ -34,23 +37,47 @@
             <td>Francine Santos</td>
             <td>23/08/1985</td>
             <td>Desenvolvedor Web</td>
+             <td>88350-000</td>
+               <td>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                <a type="submit" class="btn btn-outline-success me-2" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-000">Pesquisar</a>
+
+                    </div>
+               </td>
+
         </tr>
         <tr>
             <th scope="row">2020</th>
             <td>Gustavo Santos</td>
             <td>12/08/2003</td>
             <td>Python</td>
+            <td>88355-000</td>
+            <td>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <a type="submit" class="btn btn-outline-success me-2" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88355-000">Pesquisar</a>
+
+                </div>
+            </td>
+
         </tr>
         <tr>
             <th scope="row">3030</th>
             <td>Derick Cazuza da Silva</td>
             <td>16/03/2015</td>
             <td>Informática para Iniciante</td>
+            <td>88355-010</td>
+            <td>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <a type="submit" class="btn btn-outline-success me-2" role="button" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88355-010">Pesquisar</a>
+
+                </div>
+            </td>
+       
 
         </tr>
     </tbody>
 </table>
 <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-outline-success me-2" style="background-color: #ECB038;" type="button">Adicionar</button>
+    <a type="submit" class="btn btn-outline-success me-2"  style="background-color: #ECB038;" type="button">Adicionar</a>
     
 </div>

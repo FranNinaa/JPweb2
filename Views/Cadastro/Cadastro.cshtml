@@ -6,107 +6,100 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-<style>
+    <title>Cadastro</title>
+    <style>
 
- 
-    * {
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-     
-      
-    }
 
-    .full-screen-container {
-      background-image: url('https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg?size=626&ext=jpg&ga=GA1.2.416235426.1689047761&semt=sph');
-      height: 100vh;
-      width: 100vw;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-       
-    }
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
 
-    body {
-     height: auto;
-      width: auto;
-      
-    }
-    
- 
-    .login-container {
-      background-color: hsla(201, 100%, 6%, 0.6);
-      padding: 50px 30px;
-      min-width: 400px;
-      width: 50%;
-      max-width: 600px;
-    }
- 
-    .login-title {
-      color: #fff;
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.5em;
-      font-weight: normal;
-    }
- 
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
- 
-    .input-group label {
-      color: #fff;
-      font-weight: lighter;
-      font-size: 1.5em;
-      margin-bottom: 7px;
-    }
- 
-    .input-group input {
-      font-size: 1.5em;
-      padding: 0.1em 0.25em;
-      background-color: hsla(201, 100%, 91%, 0.3);
-      border: 1px solid hsl(201, 100%, 6%);
-      outline: none;
-      border-radius: 5px;
-      color: #fff;
-      font-weight: lighter;
-    }
- 
-    .input-group input:focus {
-      border: 1px solid hsl(201, 100%, 50%);
-    }
- 
-    .login-button {
-      padding: 10px 30px;
-      width: 100%;
-      border-radius: 5px;
-      background: hsla(201, 100%, 50%, 0.1);
-      border: 1px solid hsl(201, 100%, 50%);
-      outline: none;
-      font-size: 1.5em;
-      color: #fff;
-      font-weight: lighter;
-      margin-top: 20px;
-      cursor: pointer;
-    }
- 
-    .login-button:hover {
-      background-color: hsla(201, 100%, 50%, 0.3);
-    }
- 
-    .login-button:focus {
-      background-color: hsla(201, 100%, 50%, 0.5);
-    }
+        .full-screen-container {
+            background-image: url('https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg?size=626&ext=jpg&ga=GA1.2.416235426.1689047761&semt=sph');
+            margin-left: -30%;
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-</style>
+
+        .login-container {
+            background-color: hsla(201, 100%, 6%, 0.6);
+            padding: 50px 30px;
+            min-width: 400px;
+            width: 50%;
+            max-width: 600px;
+        }
+
+        .login-title {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: normal;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+            .input-group label {
+                color: #fff;
+                font-weight: lighter;
+                font-size: 1.5em;
+                margin-bottom: 7px;
+            }
+
+            .input-group input {
+                font-size: 1.5em;
+                padding: 0.1em 0.25em;
+                background-color: hsla(201, 100%, 91%, 0.3);
+                border: 1px solid hsl(201, 100%, 6%);
+                outline: none;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: lighter;
+            }
+
+                .input-group input:focus {
+                    border: 1px solid hsl(201, 100%, 50%);
+                }
+
+        .login-button {
+            padding: 10px 30px;
+            width: 100%;
+            border-radius: 5px;
+            background: hsla(201, 100%, 50%, 0.1);
+            border: 1px solid hsl(201, 100%, 50%);
+            outline: none;
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: lighter;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: hsla(201, 100%, 50%, 0.3);
+            }
+
+            .login-button:focus {
+                background-color: hsla(201, 100%, 50%, 0.5);
+            }
+
+    </style>
 </head>
 <body>
-   
-    <div class="full-screen-container" style="margin-left:0px;">
+
+    <div class="full-screen-container">
+
         <div class="login-container">
             <h3 class="login-title">Bem Vindo !!</h3>
             <form>
@@ -114,16 +107,26 @@
                     <label>Email</label>
                     <input type="email" />
                 </div>
+
                 <div class="input-group">
-                    <label>Password</label>
+                    <label>Usuario</label>
+                    <input type="text" />
+                </div>
+
+                <div class="input-group">
+                    <label>Senha</label>
                     <input type="password" />
                 </div>
-                <button type="submit" class="login-button">Acessar</button>
-                <button type="submit" class="login-button">Faça seu Cadastro</button>
+
+                <div class="input-group">
+                    <label>Confirmar Senha</label>
+                        <input type="password" />
+                </div>
+                
+                <button type="submit" class="login-button">Cadastar</button>
+
             </form>
         </div>
     </div>
 </body>
-
-
 </html>

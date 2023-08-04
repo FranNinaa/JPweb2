@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Views\Cadastro\style.css" />
+    <None Remove="Views\Login\style.css" />
   </ItemGroup>
 
 </Project>

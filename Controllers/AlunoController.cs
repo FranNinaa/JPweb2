@@ -42,6 +42,15 @@ namespace JPweb.Controllers
 
             return View("Aluno");
         }
+        public IActionResult Adicionar()
+        {
+            return View();
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
     }
    
 }

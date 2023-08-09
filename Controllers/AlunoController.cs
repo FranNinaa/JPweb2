@@ -32,6 +32,10 @@ namespace JPweb.Controllers
                 {
                     endereco = JsonSerializer.Deserialize<Endereco>(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions() { });
                 }
+                else
+                {
+                    ViewData["MsgErro"] = "Erro n a busca do endereço !";
+                }
 
             }
             catch (Exception)
@@ -39,7 +43,7 @@ namespace JPweb.Controllers
 
                 throw;
             }
-
+            ViewData["MsgAcept"] = "Sucesso na Busca do Endereço !";
             return View("Aluno");
         }
         public IActionResult Adicionar()

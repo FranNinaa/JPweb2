@@ -1,12 +1,24 @@
-﻿
+﻿@if (ViewData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @ViewData["MsgErro"]
+    </div>
+}
+@if (ViewData["MsgAcept"] != null)
+{
+    <div class="alert-warning">
+        @ViewData["MsgAcept"]
+    </div>
+}
+
 
 <table class="table" style=" background-color: #fff;">
 
     <figure class="text-center">
-        <h1> <strong>Alunos</strong></h1>
+        <h1><strong>Alunos</strong></h1>
     </figure>
 
-    <body style=" background-color: #6193A1;margin: auto;"></body >
+    <body style=" background-color: #6193A1;margin: auto;"></body>
 
 
 <thead class="table table-success table-striped-columns">

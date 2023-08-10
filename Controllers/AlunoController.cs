@@ -44,7 +44,8 @@ namespace JPweb.Controllers
                 throw;
             }
             ViewData["MsgAcept"] = "Sucesso na Busca do Endereço !";
-            return View("Aluno");
+
+            return View("Endereco", endereco);
         }
         public IActionResult Adicionar()
         {

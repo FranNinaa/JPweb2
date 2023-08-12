@@ -1,7 +1,20 @@
+using JPweb.Data.Repositorio.Interfaces;
+using JPweb.Data.Repositorio;
+using JPweb.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient();
+
+var connectionstring = builder.Configuration.GetConnectionString("StringConexao");
+builder.Services.AddDbContext<BancoContexto>(options => options.UseSqlServer(connectionstring));
+
+builder.Services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+
 
 var app = builder.Build();
 

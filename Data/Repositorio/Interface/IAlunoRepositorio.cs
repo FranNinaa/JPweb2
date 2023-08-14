@@ -6,7 +6,8 @@ namespace JPweb.Data.Repositorio.Interfaces
     {
         List<Aluno> BuscarAlunos();
 
-
+        void InserirAluno(Aluno aluno);
 
     }
+
 }

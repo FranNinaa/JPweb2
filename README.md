@@ -38,9 +38,9 @@ A aplicação possui as seguintes funcionalidades:
 ## Estrutura do Projeto
 
 - `Controllers/`: Contém os controladores do ASP.NET MVC para gerenciar as ações e rotas da aplicação.
-- `Models/`: Contém as classes de modelo que representam Alunos e Professores, com suas propriedades e validações.
-- `Views/`: Contém os arquivos de visualização em HTML, onde são exibidos os dados e formulários.
-- `Content/`: Contém os arquivos de estilo (CSS) para a interface.
+- `Models/`: Contém as classes de modelo que representam Alunos, com suas propriedades e validações.
+- `Views/`: Contém os arquivos de visualização em HTML, onde são exibidos os dados formulários e contém os arquivos de estilo (CSS) para a interface
+- `Data/`: Contém conexão com banco de dados SQL SERVER.
 - `Scripts/`: Contém os arquivos JavaScript para a interatividade da página.
 
 ## Contribuição

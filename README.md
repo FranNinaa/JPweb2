@@ -2,10 +2,14 @@
 Este é um projeto de aplicação web que utiliza o padrão arquitetural MVC (Model-View-Controller) para gerenciar o cadastro de alunos e professores. A aplicação permite cadastrar informações dos alunos e professores, armazenando esses dados em um banco de dados e exibindo-os em tabelas na interface.
 
 <h2>Tecnologias Utilizadas</h2>
-<strong></strong>Linguagem de Programação: C#</strong>
-<strong></strong>Framework Web: ASP.NET MVC</strong>
-<strong></strong>Front-End: HTML, CSS, JavaScript</strong>
-<strong></strong>Banco de Dados: SQL Server (ou outro sistema de gerenciamento de banco de dados compatível com o ASP.NET)</strong>
+<strong>Linguagem de Programação: C#</strong>
+<br/>
+<strong>Framework Web: ASP.NET MVC</strong>
+<br/>
+<strong>Front-End: HTML, CSS, JavaScript</strong>
+<br/>
+<strong>Banco de Dados: SQL Server (ou outro sistema de gerenciamento de banco de dados compatível com o ASP.NET)</strong>
+<br/>
 
 <h2>Requisitos</h2>
 Certifique-se de ter o Visual Studio (ou outra IDE compatível com ASP.NET) instalado em sua máquina antes de prosseguir.

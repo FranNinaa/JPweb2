@@ -14,10 +14,10 @@ namespace JPweb.Data.Repositorio
             _bancoContexto = bancoContexto;
         }
 
-       public List<Aluno> BuscarAlunos()
-       {
-        return _bancoContexto.Aluno.ToList();
-       }
+          public List<Aluno> BuscarAlunos()
+          {
+             return _bancoContexto.Aluno.ToList();
+          }
 
 
         public void InserirAluno(Aluno aluno)

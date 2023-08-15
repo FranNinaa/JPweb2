@@ -17,8 +17,8 @@ namespace JPweb.Controllers
         }
         public IActionResult Index()
         {
-           var aluno = _alunoRepositorio.BuscarAlunos();
-           return View(aluno);
+          var aluno = _alunoRepositorio.BuscarAlunos();
+          return View(aluno);
         }
 
         public async Task<IActionResult> BuscarEndereco(string cep)

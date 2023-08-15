@@ -14,7 +14,8 @@ Este é um projeto de aplicação web que utiliza o padrão arquitetural MVC (Mo
 <h2>Requisitos</h2>
 Certifique-se de ter o Visual Studio (ou outra IDE compatível com ASP.NET) instalado em sua máquina antes de prosseguir.
 
-<strong>Visual Studio: <a href="[URL do site](https://visualstudio.microsoft.com/pt-br/vs/community/#:~:text=Visual%20Studio%202022%20Community%20Edition%20%E2%80%93%20Baixe%20a%20Vers%C3%A3o%20Gratuita%20Mais%20Recente)">Download Visual Studio</a></strong>
+<strong>Visual Studio: 
+<a href="https://visualstudio.microsoft.com/pt-br/vs/community/#:~:text=Visual%20Studio%202022%20Community%20Edition%20%E2%80%93%20Baixe%20a%20Vers%C3%A3o%20Gratuita%20Mais%20Recente">Download Visual Studio</a></strong>
 
 <h2>Como Executar</h2>
 Clone ou baixe este repositório para sua máquina.<br/>

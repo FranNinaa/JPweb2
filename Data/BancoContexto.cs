@@ -10,10 +10,7 @@ namespace JPweb.Data
         {
 
 
-
         }
-
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

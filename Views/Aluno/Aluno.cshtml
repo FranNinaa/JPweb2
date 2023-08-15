@@ -14,7 +14,22 @@
         @ViewData["MsgAcept"]
     </div>
 }
+@if (Model != null && Model.Any())
+{
+    foreach (Aluno aluno in Model)
+    {
+        <tr>
+            <td> @aluno.Nome</td>
 
+            <td>
+                <div class="d-grid gap-2 d-md-block">
+                    <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88350-665">Endereco</a>
+                </div>
+            </td>
+        </tr>
+
+    }
+}
 
 
 <table class="table" style=" background-color: #fff;">
@@ -71,26 +86,7 @@
 
         </tr>
     </tbody>
-    @if (Model != null && Model.Any())
-    {
-        foreach (Aluno aluno in Model)
-        {
-            <tr>
-                <td> @aluno.Nome</td>
-
-
-
-                <td>
-                    <div class="d-grid gap-2 d-md-block">
-                        <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
-                    </div>
-                </td>
-            </tr>
-
-
-
-        }
-    }
+ 
 </table>
 <br />
 <div class="d-grid gap-2 col-6 mx-auto">

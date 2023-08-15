@@ -7,37 +7,39 @@
 <body style=" background-color: #6193A1;margin: auto;"></body>
 
 
-<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;">
+<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;" asp-controller="Aluno" asp-action="InserirAluno" method="post" >
     
     <div class="mb-3">
         <label  class="form-label">Nome</label>
-        <input type="text" class="form-control">
+        <input type="text" asp-for="Nome" class="form-control">
     </div>
     <div class="mb-3">
         <label class="form-label">Curso</label>
-        <input type="text" class="form-control">
+        <input type="text" asp-for="Curso" class="form-control">
     </div>
     <div class="mb-3">
         <label class="form-label">CEP</label>
-        <input type="text" class="form-control">
+        <input type="text" asp-for="Cep" class="form-control">
     </div>
     <div class="mb-3">
         <label  class="form-label">Data de Nascimento</label>
-        <input type="text" class="form-control">
+        <input type="text" asp-for="DataNascimento" class="form-control">
     </div>
-    <div class="mb-3">
+    @*<div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+    </div>*@
+    @*<div class="mb-3">
+        <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>*@
+
+    <br />
+
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <button class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="submit">Adicionar</button>
+        <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Index">Fechar</a>
     </div>
     
 </form>
-<br />
-<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-     <a class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="button">Adicionar</a>
-      <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Index">Fechar</a> 
-</div>

@@ -17,8 +17,8 @@ namespace JPweb.Controllers
         }
         public IActionResult Index()
         {
-            var aluno = _alunoRepositorio.BuscarAlunos();
-            return View(aluno);
+           var aluno = _alunoRepositorio.BuscarAlunos();
+           return View(aluno);
         }
 
         public async Task<IActionResult> BuscarEndereco(string cep)
@@ -54,6 +54,22 @@ namespace JPweb.Controllers
         public IActionResult Adicionar()
         {
             return View();
+        }
+        public IActionResult InserirAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.InserirAluno(aluno);
+            }
+            catch (Exception e)
+            {
+
+                TempData["MsgErro"] = "Erro ao inserir Aluno";
+            }
+            TempData["MsgErro"] = "Aluno adicionado com sucesso!!";
+
+            return RedirectToAction("Aluno");
+
         }
 
         public IActionResult Editar()

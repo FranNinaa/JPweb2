@@ -26,7 +26,8 @@
     <body style=" background-color: #6193A1;margin: auto;"></body>
 
 
-<thead class="table table-success table-striped-columns">
+    <thead class="table table-success table-striped-columns">
+        
         <tr>
            
             <th scope="col">Matricula</th>
@@ -39,37 +40,30 @@
         </tr>
     </thead>
     <tbody>
-       
-       
-        <tr>
-            <th scope="row">2020</th>
-            <td>Gustavo Santos</td>
-            <td>12/08/2003</td>
-            <td>Python</td>
-            <td>88355-000</td>
-            <td>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                <a type="submit" class="btn btn-outline-success me-2" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88355-000">Pesquisar</a>
+        @if(Model != null && Model.Any())
+        {
+            foreach(Aluno aluno in Model)
+            {
+              
+                <tr>
+                    <th scope="row">@aluno.Matricula</th>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.DataNascimento</td>
+                    <td>@aluno.Curso</td>
+                    <td>@aluno.Cep</td>
+                    <td>@aluno.Endereco</td>
+                    <td>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a type="submit" class="btn btn-outline-success me-2" role="button" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Pesquisar</a>
 
-                </div>
-            </td>
+                        </div>
+                    </td>
 
-        </tr>
-        <tr>
-            <th scope="row">3030</th>
-            <td>Derick Cazuza da Silva</td>
-            <td>16/03/2015</td>
-            <td>Informática para Iniciante</td>
-            <td>88355-010</td>
-            <td>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                <a type="submit" class="btn btn-outline-success me-2" role="button" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="88355-010">Pesquisar</a>
 
-                </div>
-            </td>
-       
-
-        </tr>
+                </tr>
+            }
+        }
+      
     </tbody>
  
 </table>

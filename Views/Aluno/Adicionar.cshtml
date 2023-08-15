@@ -25,6 +25,14 @@
         <label  class="form-label">Data de Nascimento</label>
         <input type="text" asp-for="DataNascimento" class="form-control">
     </div>
+    <div class="mb-3">
+        <label class="form-label">Matricula</label>
+        <input type="text" asp-for="Matricula" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Endereço</label>
+        <input type="text" asp-for="Endereco" class="form-control">
+    </div>
     @*<div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
         <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -39,7 +47,7 @@
 
     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
         <button class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="submit">Adicionar</button>
-        <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Index">Fechar</a>
+        <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</a>
     </div>
     
 </form>

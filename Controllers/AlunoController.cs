@@ -15,7 +15,7 @@ namespace JPweb.Controllers
             _configuration = configuration;
             _alunoRepositorio = alunoRepositorio;
         }
-        public IActionResult Index()
+        public IActionResult Aluno()
         {
           var aluno = _alunoRepositorio.BuscarAlunos();
           return View(aluno);

@@ -73,14 +73,39 @@ namespace JPweb.Controllers
 
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int Id)
         {
-            return View();
+            Aluno aluno =  _alunoRepositorio.ListarPorId(Id);
+            return View(aluno);
         }
 
-        public IActionResult ExcluirConfirmacao()
+        public IActionResult ExcluirConfirmacao(int Id)
         {
-            return View();
+            Aluno aluno = _alunoRepositorio.ListarPorId(Id);
+            return View(aluno);
+        }
+
+        public IActionResult Apagar(int Id)
+        {
+            _alunoRepositorio.Apagar(Id);
+            return RedirectToAction("Aluno");
+        }
+
+        public IActionResult AlterarAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.AtualizarAluno(aluno);
+            }
+            catch (Exception e)
+            {
+
+                TempData["MsgErro"] = "Erro ao inserir Aluno";
+            }
+            TempData["MsgErro"] = "Aluno adicionado com sucesso!!";
+
+            return RedirectToAction("Aluno");
+
         }
     }
    

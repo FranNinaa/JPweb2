@@ -1,12 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Aluno
+
+
 <div class="text-center">
-    <h3>Você tem certeza que deseja apagar esse cadastro ??</h3>
+    <h3>Você tem certeza que deseja apagar o cadastro @Model.Nome ??</h3>
     <br/>
     <a class="btn btn-primary btn-block" role="button" asp-controller="Aluno" asp-action="Aluno">Cancelar Exclusão</a>
-    <a class="btn btn-danger btn-block" role="button" asp-controller="Aluno" asp-action="Apagar">Confirmar Exclusão</a>
+    <a class="btn btn-danger btn-block" asp-route-id="@Model.Id" asp-controller="Aluno" asp-action="Apagar" role="button">Confirmar Exclusão</a>
 </div>
 

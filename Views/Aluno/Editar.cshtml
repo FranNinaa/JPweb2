@@ -9,7 +9,9 @@
 </body>
 
 
-<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;" asp-controller="Aluno" asp-action="InserirAluno" method="post">
+<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;" asp-controller="Aluno" asp-action="AlterarAluno" method="post">
+
+    <input type="hidden" asp-for="Id"/>
 
     <div class="mb-3">
         <label class="form-label">Nome</label>

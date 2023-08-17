@@ -36,6 +36,7 @@
             <th scope="col">Curso</th>
             <th scope="col">CEP</th>
              <th scope="col">Endereço</th>
+            <th scope="col"></th>
 
         </tr>
     </thead>
@@ -53,8 +54,11 @@
                     <td>@aluno.Cep</td>
                     <td>@aluno.Endereco</td>
                     <td>
-                        <div class="d-grid gap-2 col-6 mx-auto">
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" role="group">
                             <a type="submit" class="btn btn-outline-success me-2" role="button" style="background-color: #ECB038;" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Pesquisar</a>
+                            <a type="submit" class="btn btn-primary me-2" role="button" style="background-color:deepskyblue;" role="button" asp-route-id="@aluno.Id" asp-controller="Aluno" asp-action="Editar">Editar</a>
+                            <a type="submit" class="btn btn-danger me-2" role="button" style="background-color:red;" role="button" asp-route-id="@aluno.Id" asp-controller="Aluno" asp-action="ExcluirConfirmacao">Excluir</a>
+
 
                         </div>
                     </td>

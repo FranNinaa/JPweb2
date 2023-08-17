@@ -17,6 +17,7 @@ namespace JPweb.Controllers
         }
         public IActionResult Aluno()
         {
+            //lista de alunos
           var aluno = _alunoRepositorio.BuscarAlunos();
           return View(aluno);
         }
@@ -73,6 +74,11 @@ namespace JPweb.Controllers
         }
 
         public IActionResult Editar()
+        {
+            return View();
+        }
+
+        public IActionResult ExcluirConfirmacao()
         {
             return View();
         }

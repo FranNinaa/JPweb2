@@ -10,102 +10,81 @@
 <body>
    
     <style>
-        *{
-            
-            font-family: Arial, Helvetica, sans-serif;
+
+        body {
+            background: url(" https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg? ") no-repeat center center fixed;
+            background-size: cover;
         }
-        body{
-            background-color: #6193A1;
+
+        .blur {
+            background: url("https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg?") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            filter: blur(13px);
+            position: absolute;
+            height: 300px;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -50px;
+        }
+
+        .widget {
+            border-top: 2px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .center {
+            position: absolute;
             margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
-        h1{
-            color: #ECB038;
+
+        /*  NOT REQUIRED  */
+
+        .text {
+            height: 200px;
+            width: 340px;
         }
-        p{
-            
-            text-align: justify;
-        }
-        h3{
-            text-align:left;
-            color: #6193A1;
-            
-        }
-        h4{
-          
-            color: #ECB038;
-        }
-        main{
-            margin: auto;
-            padding:10px;
-            border-radius: 10px;
-            box-shadow: 20px 20px 20px #358595;
-            background-color:#fff;
-        }
-           
+
+            .text h1 {
+                text-align: center;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+                color: #ffffff;
+                margin-top: 57px;
+                font-family: "Lora", serif;
+                font-weight: 700;
+                font-size: 38px;
+            }
+
+            .text p {
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+                margin-top: 0px;
+                font-family: "Lato", serif;
+                font-weight: 400;
+                font-size: 22px;
+            }
+
         
     </style>
-    <figure class="text-center">
-        <h1> <strong>Jovem Programador</strong></h1>
-    <p> </p>
-    <h4>
-            <strong> O futuro Desenvolvedor está aqui !! </strong>
-            
-    </h4>
-    <p></p>
-    <main>
-            <h3><strong>Sobre o Programa</strong></h3>
-            <p>
-                O <strong>JOVEM PROGRAMADOR</strong> é um <strong>PROGRAMA</strong> de capacitação tecnológica para formação de jovens a partir de
-              16 anos para atuar em empresas do Estado de Santa Catarina, independentemente do local onde estejam instaladas.
-            </p>
-             
-            <p>
-              O curso permite que jovens possam se capacitar em Tecnologia da Informação através do parceiro de ensino,
-              o Senac SC - Serviço Nacional de Aprendizagem Comercial - que dispõe de ampla experiência na área de formação
-              e capacitação de profissionais e disponibilizará as instalações em aproximadamente 20 municípios de Santa Catarina.
-            </p>
-           
-            <p>Os jovens contam com toda infraestrutura técnica e aulas de forma híbrida - online e presencial.</p>
-            
-            <p>
-                A empregabilidade é o foco do PROGRAMA, que não mede esforços para gerar aos alunos a oportunidade
-                de conseguir uma boa colocação no mercado de trabalho, especialmente nas empresas patrocinadoras e parceiras.
-                O objetivo é proporcionar aos alunos ensino de qualidade, com metodologia e desenvolvimento de habilidades alinhadas
-                às reais necessidades do setor de tecnologia.
-            </p>
-            <p>
-              Em 2023, o PROGRAMA se destina a jovens:
-            </p>
-            
-            <p>
-                <strong>Com idade mínima de 16 anos</strong>
-            </p>
+    <div class="widget center">
 
-            <p>
-                <strong>Escolaridade mínima: cursando o ensino médio </strong>
-            </p>
+        <div class="blur"></div>
 
-            <p>
-              Que residam nas cidades beneficiadas pelo programa ou em cidades vizinhas
-            </p>
+        <div class="text center">
+            <h1 class="">Bem Vindo!</h1>
+            <p>O futuro Desenvolvedor esta Aqui !</p>
+        </div>
 
-            <p>
-              O PROGRAMA é de iniciativa do SEPROSC (Sindicato das Empresas de Informática, Processamentos de Dados e Tecnologia
-              da Informação do Estado de Santa Catarina) e realização do SENAC SC.
-            </p>
-
-            <p>
-              Para a edição de 2023, o Jovem Programador estará nas seguintes cidades catarinenses:
-            </p>
-
-            <p>
-                <strong>
-                    Araranguá, Blumenau, Brusque, Caçador, Chapecó, Concórdia, Criciúma, Florianópolis, Jaraguá do Sul, Joaçaba, Joinville,
-                    Lages, Palhoça, Rio do Sul, São Miguel do Oeste, Tubarão, Videira e Xanxerê.
-                </strong>
-            </p>
-
-    </main>        
+    </div>
 </body>
+
 </html>
-</figure>

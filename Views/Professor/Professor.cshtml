@@ -4,33 +4,108 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Professor</title>
-    <h1 style="text-align:center; color: #ECB038;">Nossos Professores</h1>
-    <p></p>
+    </br>
+    <h1 style="text-align:center; color:aliceblue;">Nossos Professores</h1>
+    
 </head>
-<body style=" background-color: #6193A1;margin: auto;">
-   <div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Nivaldo Puhler</h5>
-                    <p class="card-text">Product Manager | Professor | Mentor.</p>
-                    <a href="#" class="btn btn-outline-success me-2" style="background-color: #ECB038;"> Detalhes</a>
-      </div>
+
+<body>
+    <style>
+        body {
+            background: url("https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg?") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .blur {
+            background: url("https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg? ") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            filter: blur(13px);
+            position: absolute;
+            height: 500px;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -50px;
+        }
+
+        .widget {
+            border-top: 2px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .center {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /*  NOT REQUIRED  */
+
+        .text {
+            height: 300px;
+            width: 340px;
+        }
+
+            .text h1 {
+                text-align: center;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+                color: #ffffff;
+                margin-top: 57px;
+                font-family: "Lora", serif;
+                font-weight: 700;
+                font-size: 38px;
+            }
+
+            .text p {
+                text-align: center;
+                color: #ffffff;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+                margin-top: 0px;
+                font-family: "Lato", serif;
+                font-weight: 400;
+                font-size: 22px;
+            }
+
+        .login-button {
+            padding: 10px 30px;
+            width: 100%;
+            border-radius: 5px;
+            background: hsla(201, 100%, 50%, 0.1);
+            border: 1px solid hsl(201, 100%, 50%);
+            outline: none;
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: lighter;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: hsla(201, 100%, 50%, 0.3);
+            }
+
+            .login-button:focus {
+                background-color: hsla(201, 100%, 50%, 0.5);
+            }
+
+    </style>
+    <div class="widget center">
+
+        <div class="blur"></div>
+
+        <div class="text center">
+            <h1 class="">Live CSS Blur</h1>
+            <p>Go ahead, resize me.</p>
+            <button type="submit" class="login-button">Adicionar novo Profressor</button>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-            <h5 class="card-title">Katia Schmitt Pollheim </h5>
-             <p class="card-text">Desenvolvedor de Software | Product Owner | Mentora.</p>
-             <a href="#" class="btn btn-outline-success me-2" style="background-color: #ECB038; ">Detalhes</a>
-      </div>
-    </div>
-  </div>
-</div>
+   
 </body>
-<br />
-<div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-outline-success me-2" style="background-color: #ECB038;" type="button">Adicionar novo Profressor</button>
-</div>
 </html>

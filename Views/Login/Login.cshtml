@@ -1,5 +1,16 @@
 ﻿
+@{
+    Layout = "_LayoutDeslogado";
+}
 
+@if (ViewData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @ViewData["MsgErro"]
+    </div>
+}
+
+@model Login
 
 <!doctype html>
 <html lang="pt-br">
@@ -105,17 +116,22 @@
        
         <div class="login-container">
             <h3 class="login-title">Informe sue Login</h3>
-            <form>
+            <form asp-controller="Login" asp-action="BuscaLogin">
+
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" />
+                    <input type="email" asp-for="Email"/>
                 </div>
+
                 <br />
+
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" />
+                    <input type="password" asp-for="Senha" />
                 </div>
+
                 <br />
+
                 <button type="submit" class="login-button" asp-controller="Home" asp-action="Index">Acessar</button>
             </form>
         </div>

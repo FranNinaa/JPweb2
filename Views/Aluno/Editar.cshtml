@@ -1,57 +1,155 @@
 ﻿
 @model Aluno
 
-<figure class="text-center">
-    <h1 style=" font-size: 35px; color: #ECB038;"> <strong>Editar Cadastro</strong></h1>
-    
-</figure>
-<body style=" background-color: #6193A1;margin: auto;">
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <style>
+
+
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .full-screen-container {
+            background-image: url('https://img.freepik.com/vetores-gratis/fluxo-de-vetor-de-design-de-codigo-binario_53876-161365.jpg?size=626&ext=jpg&ga=GA1.2.416235426.1689047761&semt=sph');
+            margin-left: -10%;
+            margin-top: -5%;
+            height: 200vh;
+            width: 100vw;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .login-container {
+            background-color: hsla(201, 100%, 6%, 0.6);
+            padding: 50px 30px;
+            min-width: 400px;
+            width: 50%;
+            max-width: 600px;
+        }
+
+        .login-title {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: normal;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+            .input-group label {
+                color: #fff;
+                font-weight: lighter;
+                font-size: 1.5em;
+                margin-bottom: 7px;
+            }
+
+            .input-group input {
+                font-size: 1.5em;
+                padding: 0.1em 0.25em;
+                background-color: hsla(201, 100%, 91%, 0.3);
+                border: 1px solid hsl(201, 100%, 6%);
+                outline: none;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: lighter;
+            }
+
+                .input-group input:focus {
+                    border: 1px solid hsl(201, 100%, 50%);
+                }
+
+        .login-button {
+            padding: 10px 30px;
+            width: 100%;
+            border-radius: 5px;
+            background: hsla(201, 100%, 50%, 0.1);
+            border: 1px solid hsl(201, 100%, 50%);
+            outline: none;
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: lighter;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: hsla(201, 100%, 50%, 0.3);
+            }
+
+            .login-button:focus {
+                background-color: hsla(201, 100%, 50%, 0.5);
+            }
+
+    </style>
+</head>
+<body>
+    <div class="full-screen-container">
+
+        <div class="login-container">
+            <h3 class="login-title">Editar Cadastro !</h3>
+
+            <form asp-controller="Aluno" asp-action="AlterarAluno" method="post">
+
+                <div class="input-group">
+                    <label>Nome</label>
+                    <input type="text" asp-for="Nome">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Curso</label>
+                    <input type="text" asp-for="Curso">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">CEP</label>
+                    <input type="text" asp-for="Cep">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Data de Nascimento</label>
+                    <input type="text" asp-for="DataNascimento">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Matricula</label>
+                    <input type="text" asp-for="Matricula">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Endereço</label>
+                    <input type="text" asp-for="Endereco">
+                </div>
+                @*<div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+                </div>*@
+                @*<div class="mb-3">
+                <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>*@
+
+
+
+                <button class="login-button" type="submit">Salvar</button>
+                <button class="login-button" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</button>
+            </form>
+
+        </div>
+    </div>
 </body>
+</html>
 
-
-<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;" asp-controller="Aluno" asp-action="AlterarAluno" method="post">
-
-    <input type="hidden" asp-for="Id"/>
-
-    <div class="mb-3">
-        <label class="form-label">Nome</label>
-        <input type="text" asp-for="Nome" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Curso</label>
-        <input type="text" asp-for="Curso" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">CEP</label>
-        <input type="text" asp-for="Cep" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Data de Nascimento</label>
-        <input type="text" asp-for="DataNascimento" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Matricula</label>
-        <input type="text" asp-for="Matricula" class="form-control">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Endereço</label>
-        <input type="text" asp-for="Endereco" class="form-control">
-    </div>
-    @*<div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-    </div>*@
-    @*<div class="mb-3">
-    <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>*@
-
-    <br />
-
-    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-        <button class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="submit">Alterar</button>
-        <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</a>
-    </div>
-
-</form>

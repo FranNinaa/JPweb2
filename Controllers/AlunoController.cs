@@ -8,7 +8,7 @@ namespace JPweb.Controllers
     public class AlunoController : Controller
     {
         private readonly IConfiguration _configuration;
-        private IAlunoRepositorio _alunoRepositorio;
+        private readonly IAlunoRepositorio _alunoRepositorio;
 
         public AlunoController(IConfiguration configuration, IAlunoRepositorio alunoRepositorio)
         {
@@ -52,15 +52,17 @@ namespace JPweb.Controllers
 
             return View("Endereco", endereco);
         }
-        public IActionResult Adicionar()
+        public IActionResult Criar()
         {
             return View();
         }
-        public IActionResult InserirAluno(Aluno aluno)
+
+        [HttpPost]
+        public IActionResult Criar(Aluno aluno)
         {
             try
             {
-                _alunoRepositorio.InserirAluno(aluno);
+                _alunoRepositorio.Adicionar(aluno);
             }
             catch (Exception e)
             {
@@ -75,7 +77,7 @@ namespace JPweb.Controllers
 
         public IActionResult Editar(int Id)
         {
-            Aluno aluno =  _alunoRepositorio.ListarPorId(Id);
+            Aluno aluno = _alunoRepositorio.ListarPorId(Id);
             return View(aluno);
         }
 
@@ -91,22 +93,14 @@ namespace JPweb.Controllers
             return RedirectToAction("Aluno");
         }
 
-        public IActionResult AlterarAluno(Aluno aluno)
+        public IActionResult Alterar(Aluno aluno)
         {
-            try
-            {
-                _alunoRepositorio.AtualizarAluno(aluno);
-            }
-            catch (Exception e)
-            {
-
-                TempData["MsgErro"] = "Erro ao inserir Aluno";
-            }
-            TempData["MsgErro"] = "Aluno adicionado com sucesso!!";
+           _alunoRepositorio.Atualizar(aluno);
 
             return RedirectToAction("Aluno");
 
         }
+
     }
    
 }

@@ -106,7 +106,9 @@
         <div class="login-container">
             <h3 class="login-title">Editar Cadastro !</h3>
 
-            <form asp-controller="Aluno" asp-action="AlterarAluno" method="post">
+            <form asp-controller="Aluno" asp-action="Alterar" method="post">
+
+                <input type ="hidden"  asp-for="Id"/>
 
                 <div class="input-group">
                     <label>Nome</label>
@@ -132,20 +134,9 @@
                     <label class="form-label">Endereço</label>
                     <input type="text" asp-for="Endereco">
                 </div>
-                @*<div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-                </div>*@
-                @*<div class="mb-3">
-                <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>*@
-
-
 
                 <button class="login-button" type="submit">Salvar</button>
-                <button class="login-button" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</button>
+                <button class="login-button" type="submit" asp-controller="Aluno" asp-action="Aluno">Fechar</button>
             </form>
 
         </div>

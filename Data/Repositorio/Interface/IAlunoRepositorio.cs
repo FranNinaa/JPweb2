@@ -8,9 +8,9 @@ namespace JPweb.Data.Repositorio.Interfaces
 
         List<Aluno> BuscarAlunos();
 
-        void InserirAluno(Aluno aluno);
+        Aluno Adicionar(Aluno aluno);
 
-        Aluno AtualizarAluno(Aluno aluno);
+        Aluno Atualizar(Aluno aluno);
 
         bool Apagar(int Id);
 

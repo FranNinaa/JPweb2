@@ -1,13 +1,21 @@
-﻿using System.Security.Principal;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Principal;
 
 namespace JPweb.Models
 {
     public class Login
     {
-        public string? Id { get; set; }
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Digite seu Email !")]
 
         public string? Email { get; set; }
 
+
+        [Required(ErrorMessage = "Digite sua Senha !")]
+
         public string? Senha { get; set; }
+      
+
     }
 }

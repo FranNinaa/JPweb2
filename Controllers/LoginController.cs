@@ -19,30 +19,30 @@ namespace JPweb.Controllers
             return View("Login");
         }
 
+        [HttpPost]
         public IActionResult BuscaLogin(Login login)
         {
             try
             {
                var acesso = _loginRepositorio.ValidarLogin(login);
 
-                if (acesso != null)
+                if (ModelState.IsValid)
                 {
 
                     return RedirectToAction("Index", "Home");
 
                 }
-                else
-                {
-                    TempData["MsgErro"] = "Usuário ou senha incorreto !! Tente Novamente ...";
-                }
+                return View("Index"); 
+
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                TempData["MsgErro"] = "Erro ao Buscar dados do banco";
+                TempData["MsgErro"] = $"Não conseguimos realizar seu loguin, tente novamente, erro: {e.Message}";
+                return RedirectToAction("Index");
             }
-            return View("Index");
+          
         }
     }
 }

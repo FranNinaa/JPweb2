@@ -122,6 +122,7 @@
 
                     <tr>
 
+                        <th scope="col">Id</th>
                         <th scope="col">Matricula</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Data de Nascimento</th>
@@ -139,7 +140,8 @@
                                 {
 
                                 <tr>
-                                    <th scope="row">@aluno.Matricula</th>
+                                    <th scope="row">@aluno.Id</th>
+                                    <td>@aluno.Matricula</td>
                                     <td>@aluno.Nome</td>
                                     <td>@aluno.DataNascimento</td>
                                     <td>@aluno.Curso</td>
@@ -163,8 +165,10 @@
                 </tbody>
 
             </table>
-              <a class="login-button" role="button" asp-controller="Aluno" asp-action="Adicionar">Adicionar Novo Aluno</a>
-        </div>
+            <br/>
+           
+                <a class="login-button" submit="button" asp-controller="Aluno" asp-action="Criar">Adicionar Novo Aluno</a>
+            
     </div>
 </body>
 

@@ -20,26 +20,15 @@ namespace JPweb.Data.Repositorio
             return _bancoContexto.Aluno.FirstOrDefault(x => x.Id == id);
         }
 
-        public List<Aluno> BuscarAlunos()
-        {
-           return _bancoContexto.Aluno.ToList();
-        }
+       
 
 
-        public void InserirAluno(Aluno aluno)
-        {
-            _bancoContexto.Aluno.Add(aluno);
-            _bancoContexto.SaveChanges();
-        }
-
-        public Aluno AtualizarAluno(Aluno aluno)
+        public Aluno Atualizar(Aluno aluno)
         {
             Aluno alunoDb = ListarPorId(aluno.Id);
 
-            if (alunoDb == null)
-            {
-                throw new System.Exception("Houve um erro na atualização do Aluno !");
-            }
+            if (alunoDb == null) throw new System.Exception("Houve um erro na atualização do Aluno !");
+            
             alunoDb.Nome = aluno.Nome;
             alunoDb.Matricula = aluno.Matricula;
             alunoDb.Curso = aluno.Curso;
@@ -66,5 +55,21 @@ namespace JPweb.Data.Repositorio
 
             return true;
         }
+
+        public List<Aluno> BuscarAlunos()
+        {
+            return _bancoContexto.Aluno.ToList();
+        }
+
+        public Aluno Adicionar(Aluno aluno)
+        {
+            _bancoContexto.Aluno.Add(aluno);
+            _bancoContexto.SaveChanges();
+            return aluno;
+        }
+
+       
+
+        
     }
 }

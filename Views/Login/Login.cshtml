@@ -22,8 +22,11 @@
 
  
     * {
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
      
       
     }
@@ -116,11 +119,12 @@
        
         <div class="login-container">
             <h3 class="login-title">Informe sue Login</h3>
-            <form asp-controller="Login" asp-action="BuscaLogin">
+            <form asp-controller="Login" asp-action="BuscaLogin" method="post">
 
                 <div class="input-group">
                     <label>Email</label>
                     <input type="email" asp-for="Email"/>
+                    @Html.ValidationMessageFor(x => x.Email)
                 </div>
 
                 <br />
@@ -128,6 +132,7 @@
                 <div class="input-group">
                     <label>Password</label>
                     <input type="password" asp-for="Senha" />
+                    @Html.ValidationMessageFor(x => x.Senha)
                 </div>
 
                 <br />

@@ -10,9 +10,9 @@ namespace JPweb.Data.Mapeamento
         {
             builder.ToTable("Login");
 
-            builder.HasKey(t => t.Id);
-            builder.Property(t => t.Email).HasColumnType("varchar(100)");
-            builder.Property(t => t.Senha).HasColumnType("varchar(20)");
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Email).HasColumnType("varchar(100)");
+            builder.Property(x => x.Senha).HasColumnType("varchar(20)");
         }   
     }
 }

@@ -16,7 +16,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Quicksand', sans-serif;
-
         }
 
         .full-screen-container {
@@ -30,8 +29,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-
         }
 
 
@@ -109,57 +106,43 @@
         <div class="login-container">
             <h3 class="login-title">Adicionar novo Aluno !</h3>
 
- <form  asp-controller="Aluno" asp-action="InserirAluno" method="post" >
+            <form asp-controller="Aluno" asp-action="Criar" method="post">
 
-             <div class="input-group">
-                <label>Nome</label>
-                <input type="text" asp-for="Nome">
-            </div>
-            <div class="input-group">
-                <label class="form-label">Curso</label>
-                <input type="text" asp-for="Curso">
-            </div>
-             <div class="input-group">   
-                <label class="form-label">CEP</label>
-                <input type="text" asp-for="Cep">
-            </div>
-              <div class="input-group">
-                <label  class="form-label">Data de Nascimento</label>
-                <input type="text" asp-for="DataNascimento">
-            </div>
-             <div class="input-group">
-                <label class="form-label">Matricula</label>
-                <input type="text" asp-for="Matricula">
-            </div>
-             <div class="input-group">
-                <label class="form-label">Endereço</label>
-                <input type="text" asp-for="Endereco">
-            </div>
-            @*<div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
-            </div>*@
-            @*<div class="mb-3">
-                <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>*@
+                <div class="input-group">
+                    <label>Nome</label>
+                    <input type="text" asp-for="Nome">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Curso</label>
+                    <input type="text" asp-for="Curso">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">CEP</label>
+                    <input type="text" asp-for="Cep">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Data de Nascimento</label>
+                    <input type="text" asp-for="DataNascimento">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Matricula</label>
+                    <input type="text" asp-for="Matricula">
+                </div>
+                <div class="input-group">
+                    <label class="form-label">Endereço</label>
+                    <input type="text" asp-for="Endereco">
+                </div>
 
-       
 
-             <button class="login-button"  type="submit">Adicionar</button>
-             <button class="login-button" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</button>
-</form>
+                <button class="login-button" type="submit">Salvar</button>
+                <button class="login-button" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</button>
+            </form>
 
         </div>
     </div>
 </body>
 </html>
 
-@*<figure class="text-center">
-    <h1 style=" font-size: 35px; color: #ECB038;"> <strong>Seja Bem-Vindo !</strong></h1>
-    <h2 style=" color: #ECB038;"> <strong>Faça seu Cadastro</strong></h2>
-</figure>*@
 
 
 
